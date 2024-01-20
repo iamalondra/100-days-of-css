@@ -1,0 +1,89 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.box {
+    display: flex;
+    width: 400px;
+    height: 400px;
+    background-image: linear-gradient(to bottom left, #4ec0c8, #433ba0);
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: rgba(100, 100, 111, 0.29) 0px 7px 29px 0px;
+}
+
+.row-one {
+    font-size: 100px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.row-one div{
+    box-shadow: rgba(100, 100, 111, 0.29) 0px 7px 29px 0px;
+}
+
+.row-two {
+    font-size: 82px;
+    font-weight: 700;  
+}
+
+.row-three {
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0.04em;
+}
+
+.one {
+    width: 25px;
+    height: 100px;
+    border-radius: 2px;
+    background-color: white;
+    z-index: 2;
+}
+
+.lilone{
+    height: 20px;
+    width:40px;
+    background-color: white;
+    position: relative;
+    transform: rotate(-45deg);
+    top: 11px;
+    left: 14px;
+    border-radius: 2px;
+}
+
+.zero {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border-width: 25px;
+    border-style: solid;
+    border-color: white;
+    position:relative;
+    right: 14px;
+    z-index: 1;
+}
+
+.zero.zero-1{
+    right: 28px;
+    z-index: 0;
+}
+
+p{
+    color: white; 
+    font-family:'Open Sans', Helvetica, sans-serif;
+    margin:0;
+    line-height: 80%;
+}
+
+
+
+body {
+    margin: 0;
+}
