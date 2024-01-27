@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Day Two</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <div class="container"> 
+            <div class="box"> 
+                <button>
+                    <div class="line" id="line-1"></div>
+                    <div class="line" id="line-2"></div>
+                    <div class="line" id="line-3"></div>
+                </button>
+            </div>
+    </div>
+
+
+</body>
+<script type="text/javascript">
+    const button = document.querySelector("button");
+    const line2 = document.querySelector("#line-2");
+    const line1 = document.querySelector("#line-1");
+    const line3 = document.querySelector("#line-3")
+    button.addEventListener("click", () => {
+        console.log("button was clicked")
+        if(line2.classList.contains("shrink")){
+            line2.classList.remove("shrink")
+            line2.classList.add("grow")
+        }else{
+            line2.classList.add("shrink")
+            line2.classList.remove("grow")
+        }
+
+        if(line1.classList.contains("top-bar-forward")){
+            line1.classList.remove("top-bar-forward")
+            line1.classList.add("top-bar-backward")
+
+        }else{
+            line1.classList.add("top-bar-forward")
+            line1.classList.remove("top-bar-backward")
+
+        }
+
+        if(line3.classList.contains("bottom-bar-forward")){
+            line3.classList.remove("bottom-bar-forward")
+            line3.classList.add("bottom-bar-backward")
+        }else{
+            line3.classList.add("bottom-bar-forward")
+            line3.classList.remove("bottom-bar-backward")
+        }
+    })
+
+</script>
+</html>

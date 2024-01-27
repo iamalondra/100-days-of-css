@@ -1,0 +1,104 @@
+.container {
+    
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 100vh;
+}
+
+.box {
+    display: flex;
+    width: 400px;
+    height: 400px;
+    background-color:  #3faf82;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: rgba(100, 100, 111, 0.29) 0px 7px 29px 0px;
+}
+
+.line {
+    background-color: white;
+    width: 80px; 
+    height: 8px; 
+    margin-bottom: 12px;
+    border-radius: 3px;
+    box-shadow: rgba(100, 100, 100, 0.50) 2px 4px 8px 0px;
+}
+
+@keyframes shrink {
+    from {transform: scale(1); opacity: 1;}
+    to {transform: scale(0); opacity: 0;}
+}
+
+.shrink {
+   animation-name: shrink;
+   animation-duration: 1s;
+   animation-fill-mode: forwards;
+}
+
+
+@keyframes grow {
+    0%{transform: scale(0); opacity:0;}
+    55%{transform: scale(0); opacity:0;}
+    100%{transform: scale(1); opacity:1;}
+}
+
+.grow {
+   animation: grow 1s forwards; 
+}
+
+@keyframes line-1-forward {
+    0%{}
+    50%{transform: translateY(20px);}
+    100%{transform: translateY(20px) rotate(45deg)}
+}
+
+.top-bar-forward {
+    animation: line-1-forward 1s forwards; 
+}
+
+@keyframes line-1-backward {
+    0%{transform: translateY(20px) rotate(45deg)}
+    50%{transform: translateY(20px) rotate(0deg)}
+    100%{}
+}
+
+.top-bar-backward {
+    animation: line-1-backward 1s forwards;
+}
+
+@keyframes line-3-forward{
+    0%{}
+    50%{transform: translateY(-20px)}
+    100%{transform: translateY(-20px) rotate(135deg)}
+}
+
+.bottom-bar-forward{
+    animation: line-3-forward 1s forwards;   
+}
+
+@keyframes line-3-backward {
+    0%{transform: translateY(-20px) rotate(135deg)}
+    50%{transform: translateY(-20px) rotate(0deg)}
+    100%{}
+}
+
+.bottom-bar-backward{
+    animation: line-3-backward 1s forwards;
+}
+
+body {
+    margin: 0px;
+}
+
+button {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
